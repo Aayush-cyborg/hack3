@@ -1,0 +1,75 @@
+
+TEST CASE 1
+______________________________________________________________________________________
+Test Case ID: Test_1                          Test Designed by: Aayush kulkarni       |
+______________________________________________________________________________________|
+Test Priority (Low/Medium/High): Med              Test Designed date: 12-09-2022      |
+Module Name: dataPlan                             Executed by: Aayush kulkarni        |
+Test Title: 1                                     Test Execution date: 13-09-2022     |
+Description: To test c program on dataplan                                            |
+______________________________________________________________________________________|
+
+______________________________________________
+OUTPUT :                                      |
+Enter the Number of GB in plan : 14           |
+Enter the number of days remaining            |
+from 1 to 30 : 18                             |
+Enter the Amount of data used till now : 9    |
+                                              |
+12 days used , 18 days remaining              |
+Average daily use : 0.75                      |
+You are EXCEEDING your DAILY Average use      |
+(0.47/day)                                    |
+Continuing this High usage, you will be       |
+exceeding your data plan by 8.50 GB           |
+                                              |
+To stay below your data plan , use no more    |
+than 0.28 GB / day                            |
+----------------------------------------------~
+
+______________________________________________________________________________________
+TEST CASE 2                                                                           |
+______________________________________________________________________________________|
+Test Case ID: Test_2                          Test Designed by: Aayush kulkarni       |
+______________________________________________________________________________________|
+Test Priority (Low/Medium/High): Med              Test Designed date: 12-09-2022      |
+Module Name: dataPlan                             Executed by: Aayush kulkarni        |
+Test Title: 2                                     Test Execution date: 13-09-2022     |
+Description: To test c program on dataplan                                            |
+______________________________________________________________________________________|
+
+_____________________________________________________________________________
+OUTPUT :                                                                     |
+Enter the Number of GB in plan : 15                                          |
+Enter the number of days remaining from 1 to 30 : 10                         |
+Enter the Amount of data used till now : 13                                  |
+20 days used , 10 days remaining                                             |
+Average daily use : 0.65                                                     |
+You are EXCEEDING your DAILY Average use(0.50/day)                           |
+Continuing this High usage, you will be exceeding your data plan by 4.50 GB  |
+To stay below your data plan , use no more than 0.20 GB / day                |
+-----------------------------------------------------------------------------~
+
+______________________________________________________________________________________
+TEST CASE 3                                                                           |
+______________________________________________________________________________________|
+Test Case ID: Test_3                          Test Designed by: Aayush kulkarni       |
+______________________________________________________________________________________|
+Test Priority (Low/Medium/High): Med              Test Designed date: 12-09-2022      |
+Module Name: dataPlan                             Executed by: Aayush kulkarni        |
+Test Title: 3                                     Test Execution date: 13-09-2022     |
+Description: To test c program on dataplan                                            |
+______________________________________________________________________________________|
+
+
+_____________________________________________________________________________
+OUTPUT :                                                                      |
+Enter the Number of GB in plan : 15                                           |
+Enter the number of days remaining from 1 to 30 : 20                          |
+Enter the Amount of data used till now : 6                                    |
+10 days used , 20 days remaining                                              |
+Average daily use : 0.60                                                      |
+You are EXCEEDING your DAILY Average use(0.50/day)                            |
+Continuing this High usage, you will be exceeding your data plan by 3.00 GB   |
+To stay below your data plan , use no more than 0.45 GB / day                 |
+______________________________________________________________________________|
