@@ -13,58 +13,46 @@
 
 int main(int argc, char **argv) {
 
-     float num,used; int days;
-
-     // input from user the amount of data
-     printf("Enter the Number of GB in plan : ");
-     scanf("%f",&num);
-
-     // input from user the number of remaining days
-     printf("Enter the number of days remaining from 1 to 30 : ");
-     scanf("%d",&days);
-
-     // input from user the amount of data used
-     printf("Enter the Amount of data used till now : "); // input from user the amount of data used
-     scanf("%f",&used);
-
-     float given =num/30;//calculate average of data that should be used
-     float avg=used/(30-days);//average of data that public is using
-     float remaining=num-(avg*(30-days)); //calculating  remaining data
-
-
-   if(avg>given)//printing the required output for exceeding the data limit
-
-{
-
-    printf("%d days used , %d days remaining \n",30-days,days);
-    printf("Average daily use : %0.2f\n",avg);
-    printf("You are EXCEEDING your DAILY Average use(%0.2f/day)\n",given);
-    printf("Continuing this High usage, you will be exceeding your data plan by %0.2f GB\n",avg*days-remaining);
-    printf("To stay below your data plan , use no more than %0.2f GB / day \n",remaining/days);
-
-    }
-
-      else if(avg<given)         //trying output for not exceeding the data limit
-
-    {
-        printf("%d days used , %d days remaining \n",30-days,days);
-        printf("Average daily use : %0.2f\n",avg);
-        printf("You are not EXCEEDING your DAILY Average use(%0.2f/day)\n",given);
-        printf("Continuing this low usage, you will be losing your data plan by %0.2f GB\n",remaining-avg*days);
-        printf("To stay on your data plan , use no more than %0.2f GB / day \n",remaining/days);
-
-    }
-
-      else if(avg==given)  //required output for exact on the data limit
-
      {
+    float total_GB,curr_day,Gb_used;
+    scanf("%f",&total_GB);
+    scanf("%f",&curr_day);
+    if(curr_day>30)
+    {
+        printf("Enter in range of 1 to 30:");                       // IF input is more than 30
+        scanf("%f",&curr_day);
+    }
+    scanf("%f",&Gb_used);
+    float left_GB=total_GB-Gb_used;
+    float left_day=30-curr_day;
+    float avg_left_GB=left_GB/left_day;
 
-        printf("You are Exactly on your DAILY Average use(%0.2f/day)\n",given);
+    double avg_gb_used=Gb_used/curr_day;
+    printf("%0.1f days used , %0.1f days remaining\n",curr_day,left_day);
+    printf("Average daily use: %0.1f GB/day\n\n",avg_gb_used);
 
+    if(avg_gb_used>0.5)
+    {
+        float exceed=avg_gb_used*left_day;
+
+        printf("You are EXCEEDING your average daily use (0.50 GB/day).\n");
+        printf("Continuing this high usage, you'll exceed your data plan by %0.1f GB.\n\n",exceed);
+        printf("To stay below your data plan, use no more than %0.1f GB/day.",avg_left_GB);
+    }
+    else
+    {
+        float lose=total_GB-(left_day*avg_gb_used);
+
+        printf("You are under using your average daily use(0.50 GB/day).\n");
+        printf("Continuing this low usage, you'll lose your data plan by %0.1f GB.\n\n",lose);
+        printf("To stay above your data plan , use %0.1f GB/day .",avg_left_GB);
     }
 
-        return 0;
-    }
+    return 0;
+     }
+
+}
+
 
 
 
